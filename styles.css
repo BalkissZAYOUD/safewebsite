@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-bar {
+    background-color: #ffb6c1;
+    padding: 10px;
+    text-align: left;
+}
+
+.logo {
+    width: 50px;
+}
+
+.title-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.site-title {
+    font-size: 28px;
+    color: #e75480;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.recommendation-button {
+    background-color: #ffe4e1;
+    border: 2px solid #e75480;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligner le contenu à gauche */
+    width: 300px;
+    text-align: left; /* Assurer que le texte est aligné à gauche */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.recommendation-button:hover {
+    background-color: #f4a6b0;
+}
+
+.social-icon {
+    width: 30px; /* Taille uniforme des icônes */
+    height: 30px; /* Ajouter une hauteur fixe */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+
+span {
+    flex-grow: 1; /* Le texte occupera le reste de l'espace disponible */
+}
+
+.recommendation-content {
+    flex: 1;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #e75480;
+    border-radius: 8px;
+    background-color: #fadaee;
+    display: none;
+}
+.awareness-campaigns {
+    text-align: center;
+    margin: 20px 0; /* Ajoutez un peu d'espace au-dessus et en dessous */
+}
+
+.campaigns-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between cards */
+    margin-top: 20px; /* Add some space above */
+}
+
+.campaign-card {
+    flex: 1; /* Allow cards to grow equally */
+    margin: 10px; /* Add margin around each card */
+    padding: 20px; /* Add padding inside cards */
+    border: 1px solid #e75480; /* Add border for visual separation */
+    border-radius: 10px; /* Round corners */
+    background-color: #f7d7e6; /* Card background color */
+}
+
+
+
+footer {
+    background-color: #ffb6c1; /* Couleur rose pour le footer */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: auto; /* Assure que le footer reste en bas */
+    position: relative;
+    width: 100%;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Chatbot</title>
+    <link rel="stylesheet" href="styleschat.css">
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <style>
+        /* Add some custom styles for the map */
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        /* Style for the location cards */
+        .location-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        .location-card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .location-card a {
+            display: inline-block;
+            margin: 5px 0;
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <!-- <img src="chatbot_security\chatbot_security\logo.jfif" alt="Logo" class="logo"> -->
+    </header>
+
+    <div class="title-section">
+        <h1 class="site-title">Empowering Women's Online Privacy</h1>
+        <p class="tagline">Your safety and privacy are our top priorities.</p>
+    </div>
+
+    <div class="main-container">
+        <div class="chatbot-container">
+            <div class="chatbot-messages" id="messages">
+                <!-- Example Messages -->
+                <div class="message chat-message">
+                    <img src="https://www.pngall.com/wp-content/uploads/15/ChatBot-PNG-Image-HD.png" alt="Chatbot" class="message-avatar">
+                    <div class="message-content">Hello! How can I assist you today?</div>
+                </div>
+                <div class="message user-message">
+                    <div class="message-content">What are your privacy features?</div>
+                    <img src="https://www.pngkit.com/png/full/115-1150342_user-avatar-icon-iconos-de-mujeres-a-color.png" alt="User" class="message-avatar">
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type your message here..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <aside class="info-section">
+            <h2>About Us</h2>
+            <p>We are dedicated to creating a safer online environment for women in Tunisia. Our chatbot offers 24/7 support, providing essential resources and guidance to help women navigate online challenges.</p>
+            <h3>Key Features</h3>
+            <ul>
+                <li>Real-time support for privacy concerns</li>
+                <li>Resources on online safety and digital rights</li>
+                <li>Educational materials on cybersecurity</li>
+                <li>Community engagement and awareness initiatives</li>
+            </ul>
+            <h3>Why Choose Us?</h3>
+            <p>Our mission is to empower women by safeguarding their online presence and fostering a supportive community. We utilize the latest in AI and cybersecurity technology to ensure your safety.</p>
+            <br><br>
+            <div class="location-container">
+                <!-- Static Location Cards -->
+                <div class="location-card">
+                    <h3>Centre d’écoute et d'orientation des femmes victimes de violence - ATFD</h3>
+                    <a id="directions1" href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=36.372,10.541;36.816,10.178" target="_blank">Get Directions</a>
+                    <p>Phone Number: 71890032</p>
+                </div>
+                <div class="location-card">
+                    <h3>Association Tunisienne des Femmes Démocrates Siège</h3>
+                    <a id="directions2" href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=36.372,10.541;36.799,10.178" target="_blank">Get Directions</a>
+                    <p>Phone Number: 71321339</p>
+                </div>
+                <div class="location-card">
+                    <h3>UN Women and International Rescue Committee (IRC)</h3>
+                    <a id="directions3" href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=36.372,10.541;36.847,10.273" target="_blank">Get Directions</a>
+                    <p>Phone Number: 71252514</p>
+                </div>
+            </div>
+            <br><br>
+            <button id="emergencyButton">Emergency</button>
+            <p id="loading">Fetching nearby locations...</p>
+            <div id="emergencyLocations"></div>
+            <div id="map"></div>
+        
+            
+        </aside>
+    </div>
+
+    <!-- Include Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <!-- Include your chatbot.js script -->
+    <script src="chatbot.js"></script>
+    <script src="emergency.js"></script>
+
+    <footer>
+        <p>Contact us: <a href="mailto:cyberavengers@esprit.tn">cyberavengers@esprit.tn</a> | Phone: +216 22 222 222 | Follow us on <a href="#">Facebook</a></p>
+    </footer>
+
+</body>
+</html>

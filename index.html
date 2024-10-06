@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtectU - Feminine Cybersecurity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="menu" class="nav-menu">
+            <ul class="links">
+                <li><a href="indexchat.html">Our Chatbot</a></li>
+                <li><a href="cybersec.html">Security Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Background -->
+    <section id="banner">
+        <video autoplay muted loop id="bg-video">
+            <source src="images/breath.mp4" type="video/mp4">
+        </video>
+        <div class="banner-content">
+            <h1>Welcome to ProtectU</h1>
+            <p>Empowering women to stay safe online</p>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <h2>Test Your Cybersecurity Knowledge</h2>
+        <div class="quiz-container">
+            <p>Which of the following is a secure way to protect your online accounts?</p>
+            <ul>
+                <li><input type="radio" name="question1"> Use the same password for all accounts</li>
+                <li><input type="radio" name="question1"> Use two-factor authentication</li>
+                <li><input type="radio" name="question1"> Share passwords with trusted friends</li>
+            </ul>
+            <p>How can you recognize a phishing email?</p>
+            <ul>
+                <li><input type="radio" name="question2"> It asks for personal information</li>
+                <li><input type="radio" name="question2"> It comes from a known company</li>
+                <li><input type="radio" name="question2"> It has a secure-looking logo</li>
+            </ul>
+            <button class="quiz-btn">Submit Answers</button>
+        </div>
+    </section>
+
+    <!-- Phishing Detection Section -->
+    <section id="phishing-detection" class="phishing-section">
+        <h2>Check If a Link is Safe</h2>
+        <p>Paste a link below to verify if it's a phishing or safe URL.</p>
+        <form id="phishing-form">
+            <label for="phishing-url">Enter URL:</label>
+            <input type="text" id="phishing-url" placeholder="https://example.com">
+            <button type="button" onclick="analyzeLink()">Analyze</button>
+        </form>
+        <p id="phishing-result"></p>
+    </section>
+
+    <!-- Get in Touch Form -->
+    <section id="contact-form" class="contact-section">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <div class="field half">
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" placeholder="Enter your name">
+            </div>
+            <div class="field half">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" placeholder="Enter your email">
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="6" placeholder="How can we help you?"></textarea>
+            </div>
+            <ul class="actions">
+                <li><input type="submit" value="Send Message" class="button special"></li>
+            </ul>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <p>Contact us: cyberavengers@esprit.tn | Phone: +216 22 222 222 | Follow us on Facebook</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+
+        async function analyzeLink() {
+            const url = document.getElementById('phishing-url').value;
+            const resultElement = document.getElementById('phishing-result');
+
+            if (!url) {
+                resultElement.textContent = 'Please enter a URL';
+                return;
+            }
+
+            try {
+                // Call your local backend API
+                const response = await fetch('http://localhost:3000/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ url }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const result = await response.json();
+                resultElement.textContent = result.message;
+            } catch (error) {
+                resultElement.textContent = 'Error analyzing the URL. Please try again.';
+            }
+        }
+    </script>
+
+</body>
+</html>

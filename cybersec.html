@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar"></header>
+    <!-- Title section -->
+    <div class="title-section">
+        <h1 class="site-title">We are here to protect you</h1>
+    </div>
+
+    <div class="main-container">
+        <!-- Buttons in the center -->
+        <div class="button-container">
+            <div class="recommendation-button" onclick="showRecommendation('facebook')">
+                <img src="media/facebook-icon.jfif" alt="Facebook" class="social-icon">
+                <span>Secure your Facebook Account</span>
+            </div>
+            <div class="recommendation-button" onclick="showRecommendation('instagram')">
+                <img src="media/instagram-icon.jfif" alt="Instagram" class="social-icon">
+                <span>Secure your Instagram Account</span>
+            </div>
+            <div class="recommendation-button" onclick="showRecommendation('twitter')">
+                <img src="media/X-icon.jfif" alt="Twitter" class="social-icon">
+                <span>Secure your X Account</span>
+            </div>
+        </div>
+
+        <!-- Recommendations will appear here -->
+        <div id="recommendation-content" class="recommendation-content"></div>
+    </div>
+
+    <!-- Campaigns Section -->
+    <!-- Campaigns Section -->
+<div class="campaigns-container">
+    <div class="campaign-card" id="revenge-porn">
+        <h2>Complete Article on Revenge Porn</h2>
+        <p>Revenge porn is the non-consensual distribution of intimate images or videos of a person, often by an ex-partner, with the intent to harm. This practice is a serious violation of privacy and can have deep emotional and psychological consequences for the victim.</p>
+    
+        <h3>Consequences of Revenge Porn:</h3>
+        <ul>
+            <li><strong>Emotional Trauma:</strong> Victims may experience anxiety, depression, and a sense of helplessness.</li>
+            <li><strong>Impact on Relationships:</strong> Revenge porn can affect the victim's ability to build trusting relationships in the future.</li>
+            <li><strong>Legal Consequences:</strong> The victim may have the right to pursue legal action against the perpetrator, depending on the laws in their jurisdiction.</li>
+        </ul>
+    
+        <h3>Tips to Protect Against Revenge Porn:</h3>
+        <ol>
+            <li>Never share intimate images or videos with people you do not fully trust.</li>
+            <li>Use secure messaging apps and services that offer privacy protection features.</li>
+            <li>If you are a victim of revenge porn, document everything and report it to the relevant authorities.</li>
+            <li>Seek support from mental health professionals for emotional assistance.</li>
+        </ol>
+    
+        <p>Raising awareness about this issue is essential to help prevent revenge porn and support those who have been affected. Laws are being developed in many countries to address this type of abuse.</p>
+    </div>
+    
+    <div class="campaign-card" id="doxxing">
+        <h2>Complete Article on Doxxing</h2>
+        <p>Doxxing is a malicious practice that involves collecting and disclosing personal information about an individual without their consent. This can include data such as full name, address, phone number, email address, and even financial information. Doxxing is often used as a means of harassment or revenge.</p>
+    
+        <h3>Consequences of Doxxing:</h3>
+        <ul>
+            <li><strong>Violation of Privacy:</strong> The disclosure of personal information can have a devastating impact on a person's privacy.</li>
+            <li><strong>Harassment:</strong> Victims of doxxing may be subjected to threats, online harassment, and even physical assaults.</li>
+            <li><strong>Damage to Reputation:</strong> The dissemination of private information can harm the victim's professional and personal reputation.</li>
+        </ul>
+    
+        <h3>Tips to Protect Against Doxxing:</h3>
+        <ol>
+            <li>Protect your personal information by adjusting privacy settings on your social media accounts.</li>
+            <li>Avoid sharing personal details in public forums or on social media.</li>
+            <li>Use strong, active passwords for your online accounts.</li>
+            <li>Regularly monitor your accounts for any suspicious activity.</li>
+        </ol>
+    
+        <p>If you are a victim of doxxing, it is important to report the incident to authorities and the relevant platforms. Resources are available to help victims protect themselves and cope with this difficult situation.</p>
+    </div>
+</div>
+
+    
+    <footer>
+        <p>Contact us: cyberavengers@esprit.tn | Phone: +216 22 222 222 </p>
+    </footer>
+
+    <script src="chatbot.js"></script>
+    <script src="recommendations.js"></script>
+    <script src="articles.js"></script>
+</body>
+</html>

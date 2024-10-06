@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #e55060;
+}
+
+button, .button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e55060;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+    background-color: #ff7591;
+}
+
+/* Header Styles */
+#header {
+    background-color: #e75480;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.icon {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+}
+
+.nav-menu {
+    display: none;
+    background-color: #e75480;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 15px;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu ul li a:hover {
+    color: #ff7591;
+}
+
+/* Video Background */
+#banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fbe9ea;
+}
+
+.quiz-container {
+    background: #fff3f5;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.quiz-btn {
+    background-color: #e55060;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* partie de phishing */
+.phishing-section {
+    padding: 40px;
+    background-color: #fdf2f4;
+    text-align: center;
+}
+
+#phishing-url {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid #ff99aa;
+}
+
+#phishing-detection button {
+    padding: 10px 20px;
+    background-color: #e55060;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#phishing-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #e55060;
+}
+
+
+/* Contact Form */
+.contact-section {
+    background-color: #f7eaea;
+    padding: 50px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field input, .field textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions input {
+    background-color: #e55060;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #e75480;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+#footer .socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer .socials li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#footer .socials li a {
+    color: white;
+    font-size: 20px;
+}
+
+#footer .socials li a:hover {
+    color: #ff7591;
+}
